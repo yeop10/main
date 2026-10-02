@@ -358,40 +358,64 @@
       color: #777b75;
     }
 
-    /* =========================
-       PRICE
-    ========================= */
+  /* =========================
+   PRICE
+========================= */
 
-    .price-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-top: 2px solid #405247;
-    }
+.price-packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
 
-    .price-table th,
-    .price-table td {
-      padding: 17px 20px;
-      border-bottom: 1px solid #e8e6df;
-      text-align: left;
-      font-size: 14px;
-    }
+.price-card {
+  background: #fff;
+  border: 1px solid #e5e3db;
+  padding: 30px 26px;
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+}
 
-    .price-table th {
-      background: #f2f1eb;
-      color: #48534b;
-      font-weight: 600;
-    }
+.price-card-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #354239;
+  margin-bottom: 8px;
+}
 
-    .price-table td {
-      color: #686e68;
-    }
+.price-card-price {
+  font-size: 30px;
+  font-weight: 600;
+  color: #8a7650;
+  margin-bottom: 20px;
+}
 
-    .price-note {
-      margin-top: 15px;
-      color: #8a8d87;
-      font-size: 12px;
-    }
+.price-card-desc {
+  color: #5f665f;
+  font-size: 13px;
+  line-height: 1.8;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e8e6df;
+}
+
+.price-card-detail {
+  margin-top: 18px;
+  color: #777c76;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.price-card-detail strong {
+  color: #48534b;
+  font-weight: 600;
+}
+
+.price-note {
+  margin-top: 15px;
+  color: #8a8d87;
+  font-size: 12px;
+}
 
     /* =========================
        FACILITY
@@ -799,14 +823,13 @@
         border-bottom: 1px solid #d5d4cc;
       }
 
-      .price-table {
-        font-size: 13px;
-      }
+.price-packages {
+  grid-template-columns: 1fr;
+}
 
-      .price-table th,
-      .price-table td {
-        padding: 13px 10px;
-      }
+.price-card {
+  min-height: auto;
+}
 
       .facility-grid {
         grid-template-columns: 1fr;
@@ -1160,50 +1183,66 @@
       </div>
 
 
-      <table class="price-table">
+<div class="price-packages">
 
-        <thead>
-          <tr>
-            <th>구분</th>
-            <th>내용</th>
-            <th>요금</th>
-          </tr>
-        </thead>
+  <div class="price-card">
+    <div class="price-card-name">무빈소</div>
+    <div class="price-card-price">250만원</div>
 
-        <tbody>
+    <div class="price-card-desc">
+      안치부터 발인까지 모든 비용포함(영구차 제공)
+    </div>
 
-          <tr>
-            <td>빈소 이용료</td>
-            <td>빈소 규모 및 이용 시간에 따라 적용</td>
-            <td>문의</td>
-          </tr>
-
-          <tr>
-            <td>안치실</td>
-            <td>고인 안치 관련 이용료</td>
-            <td>문의</td>
-          </tr>
-
-          <tr>
-            <td>입관실</td>
-            <td>입관 진행에 필요한 시설 이용</td>
-            <td>문의</td>
-          </tr>
-
-          <tr>
-            <td>장례용품</td>
-            <td>수의, 관 등 장례용품</td>
-            <td>문의</td>
-          </tr>
-
-        </tbody>
-
-      </table>
+    <div class="price-card-detail">
+      빈소 없이 장례에 필요한 인력·용품과
+      이송차량을 갖춘 간소한 구성입니다.
+    </div>
+  </div>
 
 
-      <p class="price-note">
+  <div class="price-card">
+    <div class="price-card-name">스탠다드</div>
+    <div class="price-card-price">450만원</div>
 
-      </p>
+    <div class="price-card-desc">
+      균형 잡힌 구성의 장례. 안치부터 빈소 및 장례에 필요한
+      인력, 용품과 이송차량을 제공합니다.
+    </div>
+
+    <div class="price-card-detail">
+      <strong>구성</strong><br>
+      안치실 + 2호실 빈소<br>
+      상복 4벌, 제단 꽃<br>
+      도우미 1일당(총 2일) 12시간 1명
+    </div>
+  </div>
+
+
+  <div class="price-card">
+    <div class="price-card-name">프리미엄</div>
+    <div class="price-card-price">550만원</div>
+
+    <div class="price-card-desc">
+      최상위 구성의 장례. 안치부터 빈소 및 장례에 필요한
+      인력, 용품과 이송차량을 제공합니다.
+    </div>
+
+    <div class="price-card-detail">
+      <strong>구성</strong><br>
+      안치실 + 특 1호실<br>
+      제단 꽃, 제물, 상복 6벌<br>
+      상식 3, 성복제, 발인제<br>
+      도우미 1일당(총 2일) 12시간 2명<br>
+      리무진
+    </div>
+  </div>
+
+</div>
+
+
+<p class="price-note">
+  ※ 세부 이용 조건은 상담 시 안내해 드립니다.
+</p>
 
     </div>
 
